@@ -19,6 +19,12 @@ int main() {
 
     // at this point, we have size = 9, capacity = 16
 
+    /* the reason why you have sizeof(v) = 24bytes is that it needs to store three pointers (each 8bytes long) which keeps track of these addresses:
+        1) the starting address of the first element in the vector
+        2) the address of the next location where an element can be inserted (in our example, it'll be the address of the 10th element since we already have 9 elements)
+        3) the address of the last item that can be possibly stored in the vector (this will be the address of the 16th item of the vector)
+    */
+
     v.shrink_to_fit();  
     // as the name suggests, this reduces the capacity to just fit the 9 elements
 
