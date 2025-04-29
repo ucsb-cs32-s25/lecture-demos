@@ -63,8 +63,10 @@ void mergeSort(int arr[], int left, int right) {
     // Step 1: update condition to ensure recursion teminates properly
     if (left < right) {        
         // Step 2: find the middle point
-        int mid = (left + right) / 2;
-        // int mid = (left + (right - left)) / 2;
+        
+        // int mid = (left + right) / 2;
+        // fixed 04/29: thanks lucy! 
+        int mid = left + (right - left) / 2;
 
         // Step 3: recursively sort the first and second halves
         mergeSort(arr, left, mid);
