@@ -10,7 +10,7 @@ void bubbleSort(int a[], int n) {
     }
 }
 
-// This does O(n^2) for the best case
+// This does O(n) for the best case
 void bubbleSortOptimized(int a[], int n) {
     for (int i = n - 1; i > 0; i--) {
         bool swapped = false; // Keep track of whether a swap occurred
